@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dasar Vue.js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div id="app">
+		<p v-if="itemInStock > 100">{{ itemInStock }} barang tersedia</p>
+		<p v-else-if="itemInStock > 0">Segera, hanya {{ itemInStock }} barang yang tersedia</p>
+		<p v-else>Maaf, stok barang habis</p>
+	</div>
+
+	<script>
+		var app = new Vue ({
+			el: "#app",
+			data: {
+				"itemInStock": 200
+			}
+		})
+	</script>
+
+</body>
+</html>

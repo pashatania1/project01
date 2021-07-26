@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dasar Vue.js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div id="app">
+		<button v-on:click="pesan">Tampil Pesan</button>
+	</div>
+
+	<script>
+		var app = new Vue ({
+			el: "#app",
+			methods: {
+				pesan: function() {
+					alert("Belajar Vue.js")
+				}
+			}
+		})
+	</script>
+
+</body>
+</html>

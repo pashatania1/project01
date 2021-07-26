@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dasar Vue.js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div id="app">
+		<h3>Output Computed</h3>
+		<p>{{ acak1 }}</p>
+		<p>{{ acak1 }}</p>
+		<p>{{ acak1 }}</p>
+
+		<h3>Output Random</h3>
+		<p>{{ acak2() }}</p>
+		<p>{{ acak2() }}</p>
+		<p>{{ acak2() }}</p>
+	</div>
+
+	<script>
+		var app = new Vue({
+			el: "#app",
+			computed: {
+				acak1: function() {
+					return Math.random(10);
+				}
+			},
+			methods: {
+				acak2: function() {
+					return Math.random(10);
+				}
+			}
+		})
+	</script>
+</body>
+</html>
